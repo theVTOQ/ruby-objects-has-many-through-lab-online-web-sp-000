@@ -1,10 +1,11 @@
 class Artist
-  attr_reader :name
+  attr_reader :name, :songs
   @@all = []
 
   def initialize(name)
     @name =name
     @@all << self
+    @songs = []
   end
 
   def self.all
@@ -14,5 +15,7 @@ class Artist
   def new_song(name, genre)
     Song.new(name, self, genre)
   end
+
+  def songs
 
 end
