@@ -19,6 +19,6 @@ class Patient
   end
 
   def doctors
-
+    appointments.collect {|appt| appt.doctor}
   end
 end
